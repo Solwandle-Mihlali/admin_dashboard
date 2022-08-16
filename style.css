@@ -11,7 +11,7 @@ body{
 
     min-height: 100vh;
     width: 100%;
-    background: rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
 }
 .container{
     height:100%;
@@ -24,6 +24,8 @@ body{
     display: grid;
     grid-template-columns: repeat(5,20%);
     grid-template-rows:repeat(4,25%);
+    
+    
 }
 
 .sideBar{
@@ -49,6 +51,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    box-shadow: 4px 3px 10px black;
 }
 
 .sideBar .cell ion-icon{
@@ -77,18 +81,7 @@ body{
    
 }
 
-.main{
 
-
-    grid-column: 2;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    background:transparent;
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 3;
-}
 
 .navBar input{
 
@@ -128,7 +121,7 @@ body{
 
 ion-icon{
 
-    font-size: 16px;
+    font-size: 25px;
 }
 
 .navBar img{
@@ -192,3 +185,83 @@ ion-icon{
     
     opacity: 0.8;
   }
+
+  .square{
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    margin:20px;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 95%;
+  }
+
+  .square .cont{
+    
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: 25%;
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: rotate 5s 1;
+  }
+  @keyframes rotate {
+
+    from{
+
+        transform: rotateY(180deg);
+        transition: 4s;
+        height: 40px;
+        width: 40px;
+    }
+    50%{
+
+        height: 800px;
+        width: 800px;
+    }
+  }
+ 
+.ove{
+
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    color: var(--primary);
+    font-size: 120px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: fade 10s 1;
+    animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+
+.IT{
+    position: absolute;
+    left: 70%;
+    bottom: 20%;
+    font-size: 140px;
+    animation: fade 13s 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+@keyframes fade {
+  
+    from{
+        
+        left:-100%;
+    }
+    0%{
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 0;
+    }
+    
+}
