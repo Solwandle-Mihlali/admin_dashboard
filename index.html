@@ -10,61 +10,62 @@
     <title>grid</title>
 </head>
 <body>
+    <div class="sideNav">
 
-    <div class="container">
-        <div class="sideBar">
-
-            <div class="cell">
-                <ion-icon name="home-outline"></ion-icon>
-            </div>
-            <div class="cell">
-                <ion-icon name="mail-outline"></ion-icon>
-            </div>
-            <div class="cell">
-                <ion-icon name="time-outline"></ion-icon>
-            </div>
-            <div class="cell">
-                <ion-icon name="people-outline"></ion-icon>
-            </div>
-            <div class="cell">
-                <ion-icon name="settings-outline"></ion-icon>
-            </div>
-        </div>
-        <div class="navBar">
-            <ion-icon name="search-outline" class="searchIcon"></ion-icon>
-            <input type="text" placeholder="search....">
-            <ion-icon name="notifications-outline" class="notify"></ion-icon>
-
-            <img src="images/logo.png" alt="">
-            <div class="greeting">
-                <p>hi there,</p>
-                <h1>Mihlali</h1>
-            </div>
-            
-            <div class="buttonCont">
-               
-                <button>
-                    New
-                </button>
-                <button>
-                    Upload
-                </button>
-                <button>
-                    Share
-                </button>
-
-            </div>
-           
+        <div class="cells" id="cellOne">
             
         </div>
-            <div class="square">
 
-                <div class="cont"></div>
-                <span class="ove"> OVE</span>
-                <span class="IT">IT</span>
-                
-            </div> 
+        <div class="cells">
+            <ion-icon name="bar-chart-sharp"></ion-icon>
+        </div>
+
+        <div class="cells">
+            <ion-icon name="navigate-sharp"></ion-icon>
+        </div>
+
+        <div class="cells">
+            <ion-icon name="alert-sharp"></ion-icon> 
+        </div>
+        <div class="cells">
+            <ion-icon name="settings-sharp"></ion-icon>
+        </div>
     </div>
-    
+    <div class="container">
+            <ion-icon name="notifications-sharp" id="notificationIcon"></ion-icon>
+            <ion-icon name="person-sharp" id="userIcon"></ion-icon>
+            <div class="searchBar">
+                <ion-icon name="search-sharp"></ion-icon>
+                <input type="text" placeholder="Search...">
+            </div>
+          <!--storgae section-->
+            <section class="storageSection">
+                <div class="storageOptions">
+                    <img src="images/onedrive.svg" alt="">
+                    <div class="textDiv">
+                       <h4>one drive</h4> 
+                       <p>355gb of 500gb used</p>
+                    </div>
+                </div>
+                <div class="storageOptions">
+                    <img src="images/googleDrive.svg" alt="">
+                    <div class="textDiv">
+                        <h4>google drive</h4> 
+                       <p>260gb of 500gb used</p> 
+                    </div>
+                </div>
+                <div class="storageOptions">
+                    <img src="images/dropbox.svg" alt="">
+                    <div class="textDiv">
+                        <h4>dropbox</h4> 
+                        <p>54gb of 500gb used</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--right Panel-->
+            <section class="rightPanel"></section>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
