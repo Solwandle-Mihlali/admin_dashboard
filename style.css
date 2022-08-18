@@ -1,6 +1,7 @@
 :root{
 
-    --primary:rgb(33, 19, 153);
+    --primary:rgb(40, 35, 90);
+    --activeDay:rgb(54, 112, 54);
     
 }
 *{
@@ -31,7 +32,7 @@ body{
 
     width:70%;
     height: 20%;
-    background: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +42,7 @@ body{
     border-left-style: none;
     border-right-style: none;
     border-color: var(--primary);
-    border-width: 1.2px;
+    border-width: 1.2px;font-size: 22px;
 }
 
 #cellOne{
@@ -171,7 +172,7 @@ body{
   }
 
   .storageSection .storageOptions .textDiv h4{
-   
+     color: var(--primary);
     font-size: 14px;
     text-transform: capitalize;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
@@ -197,7 +198,254 @@ body{
     grid-row-end: 6;
     height: 95%;
     border-radius: 20px;
+
+    display: grid;
+    grid-template-columns:repeat(5,20%);
+    grid-template-rows: repeat(10,10%);
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 2px 2px 10px black;
   }
+  .title{
+   
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title h1{
+
+    font-size: 12px;
+    text-align: center;
+    color: var(--primary)
+  }
+  .gauge{
+
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background-image: url('images/gauge-chart.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+  }
+ .percentage{
+  
+    grid-row-start: 6;
+    grid-row-end: 8;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    font-size: 25px;
+ }
+
+ .rightPanel button{
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    width: 100%;
+    height: 100%;
+    background: rgb(197, 214, 41);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0.8px 0.8px 10px black
+ }
+
+ /*date range styling*/
+
+
+.dateRange{
+    background:white;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 8;
+    border-radius: 20px;
+    height: 90%;
+    width: 95%;
+    margin-left: 2%;
+    position: absolute;
+    top: -20%;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.dateRange select{
+
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    background:transparent;
+    border: none;
+    width: 10%;
+    height: 7.5%;
+    border-radius: 5px;
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.dateRange .weeklyView{
+   height: 85%;
+   position: absolute;
+   left: 2%;
+   bottom: 2%;
+   display: flex;
+   align-items: center;
+   gap: 2px;
+   padding: 2px;
+   width: 95%;
+}
+
+.dateRange .weeklyView .days{
+  height: 80%;
+  width: 20%;
+  
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(172, 172, 172, 0.493);
+ }
+
+ .dateRange .weeklyView .dayCont{
+    height: 20%;
+    width: 40%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 1px 1px 10px vlack;
+   }
+   .dateRange .weeklyView .uploaded{
+    height:40%;
+    width: 70%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+   }
+   #active{
+    background:var(--activeDay);
+    color: white;
+   }
+
+   .dateRange .title{
+
+    position: absolute;
+    top: 1%;
+    height: 10%;
+    width: 30%;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color:var(--primary);
+   }
+
+   /*daily view*/
+
+   .dailyView{
+    height: 85%;
+    position: absolute;
+    left: 40%;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+   
+ }
+
+ .dailyView .day{
+
+    height:100%;
+    width: 100%;
+    background: black;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+ }
+
+ .dailyView .day p{
+
+    font-size: 20px;
+
+ }
+ /*monthly view*/
+
+ .monthlyView{
+    height: 85%;
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    
+ }
+
+ .monthlyView .month{
+
+    height: 80%;
+    width: 25%;
+    
+    background: rgba(172, 172, 172, 0.493);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+ }
+
+ .monthlyView .month .monthName{
+   font-size: 12px;
+   color: rgb(0, 0, 0);
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+ }
+
+ .monthlyView .month .dataUploaded{
+
+    width: 60%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ #activeMonth{
+
+    background: var(--activeDay);
+    color: white;
+ }
 
 
 ion-icon{
