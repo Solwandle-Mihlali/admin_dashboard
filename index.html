@@ -63,8 +63,80 @@
                 </div>
             </section>
 
+            <!--date range section-->
+            <section class="dateRange">
+                <h1 class="title">Total data stored Weekly</h1>
+                <select id="cars" name="cars">
+                    <option value="volvo" id="week">WEEK</option>
+                    <option value="saab" id="day">DAY</option>
+                    <option value="fiat" id="month">MONTH</option>
+                  </select>
+
+                  <div class="weeklyView" id="weeklyView">
+
+                    <div class="days" >
+                      <p class="dayCont" id="monday"> Mon</p>
+                      <div class="uploaded">5gb</div>
+                    </div>
+                    <div class="days" >
+                        <p class="dayCont" id="tuesday">Tue</p>
+                        <div class="uploaded">2.8gb</div>
+                    </div>
+                    <div class="days" id="active" >
+                        <p class="dayCont" id="wednesday">Wed</p>
+                        <div class="uploaded">10.7gb</div>
+                    </div>
+                    <div class="days" >
+                        <p class="dayCont" id="thursday">Thur</p>
+                        <div class="uploaded">1gb</div>
+                    </div>
+                    <div class="days" >
+                        <p class="dayCont" id="friday">Fri</p>
+                        <div class="uploaded">400mb</div>
+                    </div>
+                
+                    
+                  </div>
+                   <!--daily view-->
+                  <div class="dailyView" id="dailyView">
+                    <div class="day" id="active" >
+                        <p class="dayCont" id="wednesday">Wed</p>
+                        <div class="uploaded">10.7gb</div>
+                    </div> 
+                  </div>
+                <!--Monthly view-->
+
+                <div class="monthlyView" id="monthlyView">
+                     <div class="month">
+                          <p class="monthName">July</p>
+                          <div class="dataUploaded">36gb</div>
+                     </div>
+                     <div class="month" id="activeMonth">
+                        <p class="monthName">August</p>
+                        <div class="dataUploaded"> 24gb</div>
+                    </div>
+
+                    <div class="month">
+                        <p class="monthName">September</p>
+                        <div class="dataUploaded">pending...</div>
+                    </div>
+
+
+                </div>
+                    
+            </section>
+
             <!--right Panel-->
-            <section class="rightPanel"></section>
+            <section class="rightPanel">
+                <span class="title">
+                    <h1>Total Cloud Storage Used (%)</h1>
+                </span>
+                <span class="gauge"></span>
+                <span class="percentage" >
+                    <p id="percentage">81</p>
+                </span>
+                <button>BUY MORE STORGE</button>
+            </section>
     </div>
     <script src="script.js"></script>
 </body>
